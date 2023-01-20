@@ -4,77 +4,76 @@
 }
 
 @font-face {
-    font-family: Montserrat Black;
+    font-family: Montserrat;
     src: url("media/Montserrat-Black.ttf");
+    font-weight: 900;
 }
 body {
-    background-color: #39BEF7;
+    background-color: #302c42;
+}
+
+header {
+
     font-family: Montserrat;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
 }
 
-.main {
-    background-color: #123749;
-    margin: 10% 20% 0;
-    border: 1.5px solid white;
-    border-radius: 10px;
-    text-align: center;
-    padding: 5% 3% 3%;
+nav ul{
+    width: 40vw; 
+    height: 120px;
+    display: flex;
+    justify-content: space-between;   
+    align-items: center;
 }
 
-/* Кнопка VISIT */
-.main a:first-child{
-    display: block;
-    margin: 0 auto;
-    padding: 1% 3%;
-    border-radius: 20px;
-    background-color: #2DC070;
-    color: white;
-    font-weight: bold;
-    letter-spacing: 2px;
-    width: fit-content;
-    
+nav ul li {
+    text-transform: uppercase;
 }
 
-/* Ссылка */
-.main a:first-child + a{
-    display: block;
-    margin: 15px auto;
-    color: #94D3FF;
-    font-family: 'Montserrat Black';
-    letter-spacing: 1px;
-    text-decoration: underline;
-    font-size: xx-large;
+div.feedback {
+    width: 400px;
+    height: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
-.main a:first-child + a::after{
-    background-image: url('media/pointer.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-clip: border-box;
-    margin: 0 0 5px 10px;
-    background-size: 30px 30px;
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    content:"";
-}
-
-.main p{
-    color: white;
-    font-size: 30px;
-    font-weight: 100;
-}
-
-.main div{
-    background-color: white;
-    border-radius: 60px;
-    width: fit-content;
-    margin: 0 auto;
-    padding: 3% 5%;
-}
-
-.main div img{
-    width: 50px;
+button {
+    border-radius: 50px;
+    background: transparent;
+    color: #fff;
+    font-family: Montserrat;
+    width: 150px;
     height: 50px;
-    margin-right: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+button.contact {
+    border: 2px solid #fff;
+}
+
+button.join {
+    border: transparent;
+    color: #343045;
+    background: linear-gradient(to right ,#8176af,#c087e8);
+}
+
+/* header end */
+
+article {
+    margin: auto 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+div.left {
+    background: violet;
+    width: 40vw;
+}
+
+div.right {
+    background: red;
 }
