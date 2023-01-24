@@ -5,19 +5,26 @@
 
 @font-face {
     font-family: Montserrat;
-    src: url("media/Montserrat-Black.ttf");
+    src: url("media/Montserrat-Bold.ttf");
     font-weight: 900;
 }
 body {
     background-color: #302c42;
+    background: url('media/lines-right.svg') no-repeat #302c42;
+    background-position: 625px -50px;
+    color: #fff;
+    font-family: Montserrat;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: bold;
 }
 
 header {
-
-    font-family: Montserrat;
-    color: #fff;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 60px;
 }
 
 nav ul{
@@ -41,6 +48,7 @@ div.feedback {
 }
 
 button {
+    border: transparent;
     border-radius: 50px;
     background: transparent;
     color: #fff;
@@ -56,24 +64,152 @@ button.contact {
 }
 
 button.join {
-    border: transparent;
     color: #343045;
     background: linear-gradient(to right ,#8176af,#c087e8);
 }
 
 /* header end */
 
-article {
+article, hero {
     margin: auto 50px;
     display: flex;
     justify-content: space-between;
+    
+}
+
+hero {
+    
+    margin-bottom: 100px;
+    background: url('media/line-left.svg') no-repeat;
+    background-position: -70px 0;
 }
 
 div.left {
-    background: violet;
+
     width: 40vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-div.right {
-    background: red;
+
+.brand-text {
+    font-size: 40px;
+    font-weight: bold;
 }
+
+.brand-text span {
+    background: linear-gradient(to right,#C0B7E8, #8176AF);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.brand-text span:last-of-type {
+    background: linear-gradient(to right,#8176AF, #C0B7E8);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    -moz-text-fill-color: transparent;
+}
+
+.brand-text p {
+    font-weight: normal;
+    margin-top: 40px;
+    font-size: 12px;
+    line-height: 20px;
+    width: 30vw;
+}
+
+.brand {
+    width: 400px;
+}
+
+.buttons {
+    margin-top: 100px;
+    display: flex;
+
+}
+
+.build {
+    background: linear-gradient(to right, #8176AF, #C0B7E8);
+    color: #343045;
+    text-transform: uppercase;
+    width: 250px;
+}
+
+.arrow {
+    background: url('media/arrow.svg') no-repeat center;
+}
+
+.brand {
+    background: url('media/brand.png') no-repeat;
+    background-size: cover;
+    width: 500px;
+    height: 450px;
+    border: 10px rgba(0, 0, 0, 0.13) solid;
+    border-radius: 100px;
+    border-bottom-left-radius: 50%;
+    -moz-background-clip: content;    
+    -webkit-background-clip: content;  
+    background-clip: content-box;
+}
+
+/* brand end */
+
+/* contacts start */
+
+article.contacts {
+    margin: auto 50px;
+    border: transparent;
+    border-radius: 60px;
+    background: linear-gradient(to right, #211E2E, rgba(58,52,86,0.95), #211E2E);
+    display: flex;
+    margin: auto 120px 50px;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+}
+
+.contacts > :not(:last-child) {
+    padding-right: 40px;
+    border-right: 1px solid #C0B7E833;
+}
+
+.contacts > div {
+    background-size: 17%;
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 100px;
+    width: 250px;
+    padding-left: 50px;
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.contacts div:first-child {
+    background-image: url('media/location.svg');
+
+}
+
+.contacts div:nth-child(2) {
+    background-image: url('media/phone.svg');
+
+}
+.contacts div:nth-child(3) {
+    background-image: url('media/mail.svg');
+
+}
+
+article p {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+/* contacts end */
