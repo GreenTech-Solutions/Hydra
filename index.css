@@ -40,7 +40,6 @@ p {
     padding: 0 300px;
     display: flex;
     flex-direction: column;
-    align-items: center;
 }
 
 header {
@@ -192,10 +191,11 @@ article.contacts {
     border-radius: 60px;
     background: linear-gradient(to right, #211E2E, rgba(58,52,86,0.95), #211E2E);
     display: flex;
-    margin: auto 120px 50px;
+    margin: auto 0 50px;
     padding: 0 50px;
     justify-content: center;
     align-items: center;
+    width: 900px;
     height: 125px;
 }
 
@@ -216,6 +216,11 @@ article.contacts {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+}
+
+.contacts > div p {
+    margin-top: 10px;
+    line-height: 15px;
 }
 
 .contacts div:first-child {
@@ -269,8 +274,8 @@ article p {
 
 .about {
     display: flex;
-    margin: auto 100px;
-    justify-content: space-around;
+    margin: auto 0;
+    justify-content: space-between;
     align-items: center;
     background: url('media/about_curves.svg') no-repeat;
     background-size: contain;
@@ -302,10 +307,14 @@ article p {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 130px;
+    padding: 0;
     padding-bottom: 70px;
     background: url('media/cards-curve.svg') no-repeat;
     background-size: cover;
+}
+
+article.cards {
+    margin: 0;
 }
 
 .card {
@@ -407,7 +416,7 @@ article p {
     justify-content: space-between;
     margin: 0 auto;
     margin-bottom: 100px;
-    padding: 40px 100px 0 ;
+    padding: 40px 0 0 ;
     width: 900px;
     background: url('media/path_curve.svg') no-repeat;
     background-position: bottom 40px right 0;
@@ -418,6 +427,7 @@ article p {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     gap: 10px;
     align-content: center;
 }
@@ -450,7 +460,7 @@ article p {
     background: radial-gradient(#403A5F, #211E2E);
     border-radius: 60px;
     padding: 50px;
-    margin: 0 200px;
+    margin: 0 0;
 }
 
 .contact-form, form {
@@ -529,7 +539,7 @@ footer {
     display: flex;
     flex-direction: column;
     gap: 50px;
-    padding: 20px 100px;
+    padding: 20px 0;
     margin: 0 auto;
     margin-bottom: 50px;
     width: 900px;
