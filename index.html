@@ -12,19 +12,19 @@
     <div class="container">
       <header class="header">
         <img src="media/logo.svg" alt="Hydra logo" class="header__logo" />
-
-        <nav class="nav">
-          <ul class="nav__ul">
+        <nav class="nav invisible">
+          <ul class="nav__menu">
             <li class="nav__li">About</li>
             <li class="nav__li">Services</li>
             <li class="nav__li">Technologies</li>
             <li class="nav__li">How to</li>
           </ul>
+          <div class="header__feedback">
+            <button class="header__button_contact button">Contact us</button>
+            <button class="header_button button">Join Hydra</button>
+          </div>
         </nav>
-        <div class="header__feedback">
-          <button class="header__button_contact button">Contact us</button>
-          <button class="header_button button">Join Hydra</button>
-        </div>
+        <button class="nav__menu-button"></button>
       </header>
       <hero class="hero">
         <div class="hero__content">
@@ -47,6 +47,7 @@
           </div>
         </div>
         <div class="hero__logo">
+          <img src="media/brand.png" alt="brand" class="hero__image" />
           <div class="hero__lines"></div>
         </div>
       </hero>
@@ -406,5 +407,6 @@
         </span>
       </footer>
     </div>
+    <script defer src="index.js"></script>
   </body>
 </html>
