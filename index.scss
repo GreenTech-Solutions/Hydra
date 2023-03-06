@@ -16,13 +16,16 @@ body {
   box-sizing: border-box;
 }
 
+button {
+  border: none;
+}
+
 @media (min-width: 360px) {
   .container {
-    // padding: 0 10vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    overflow: hidden;
+    overflow-x: hidden;
   }
 
   .button {
@@ -161,7 +164,6 @@ body {
       width: var(--logo-size);
       height: var(--logo-size);
     }
-    // TODO burger menu
     &__feedback {
       display: flex;
       justify-content: center;
@@ -187,7 +189,6 @@ body {
     justify-content: space-between;
     padding: 0 20px;
     margin-bottom: 40px;
-    overflow-x: hidden;
     &__item {
       &_gradient {
         background: linear-gradient(to right, #c0b7e8, #8176af);
@@ -274,31 +275,57 @@ body {
       rgba(58, 52, 86, 0.95),
       #211e2e
     );
+    padding: 20px;
     display: flex;
-    padding: 25px;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     margin-bottom: 70px;
-    // display: none;
+    height: 100px;
+    &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      width: 70%;
+      height: 100%;
+      position: relative;
+      // background-color: greenyellow;
+    }
     &__item {
       background-size: 17%;
       background-position: left;
       background-repeat: no-repeat;
-      height: 100px;
-      width: 30%;
+      // height: 100px;
+      width: 100%;
       display: flex;
       justify-content: center;
       align-items: center;
-      &:nth-child(2) {
-        border: 1px solid #c0b7e833;
-        border-top: none;
-        border-bottom: none;
-      }
+      position: absolute;
+    }
+    &__header {
+      display: none;
     }
     &__text {
-      margin-top: 10px;
-      line-height: 15px;
-      font-size: 10px;
+      // margin-top: 10px;
+      line-height: 16px;
+      font-size: 14px;
+      font-weight: 200;
+    }
+    &__button {
+      background: url("media/carousel-arrow.svg");
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      transition: 0.5s all ease-in-out;
+      &:hover {
+        box-shadow: 0 0 10px whitesmoke;
+      }
+
+      &_left {
+      }
+      &_right {
+        transform: rotate(180deg);
+      }
     }
     &__logo {
       width: 50px;
