@@ -48,8 +48,6 @@ document.addEventListener('DOMContentLoaded', function () {
             currentContactsItem = maxContactsItems-1;
         }
     }
-    console.log('🚀 ~ currentContactsItem:', currentContactsItem)
-
     rollContactsItems();
   }
 

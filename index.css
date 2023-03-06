@@ -250,7 +250,7 @@ button {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-bottom: 70px;
+    margin-bottom: 30px;
     height: 100px;
   }
   .contacts__content {
@@ -311,27 +311,26 @@ button {
   }
   .introduction {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding-bottom: 50px;
-    display: none;
   }
   .introduction__header {
     margin: 10px 0;
+    text-align: center;
   }
   .introduction__header_arrow {
-    background: url("media/longarrow.svg") no-repeat;
-    background-position: right;
-    background-size: 40%;
+    background: none;
   }
   .introduction__item {
     display: flex;
     flex-direction: column;
   }
   .introduction__headers {
-    width: 30%;
+    width: 100%;
   }
   .introduction__text {
+    display: none;
     width: 52%;
   }
   .about {
