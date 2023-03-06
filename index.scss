@@ -75,8 +75,11 @@ body {
     justify-content: flex-end;
     align-items: center;
     position: absolute;
+    left: 0;
     margin: 0 auto;
     top: 100%;
+    transition: 0.5s all ease-in-out;
+    opacity: 1;
     &__menu {
       display: flex;
       flex-direction: column;
@@ -95,6 +98,12 @@ body {
       cursor: pointer;
       font-size: 10px;
       outline: 1px solid whitesmoke;
+      background: radial-gradient(
+        circle,
+        rgba(40, 32, 180, 1) 0%,
+        rgba(88, 22, 199, 1) 35%,
+        rgba(0, 93, 255, 1) 100%
+      );
       width: 100%;
       text-align: center;
     }
@@ -106,6 +115,10 @@ body {
       background-image: url("/media/burger.svg");
       background-repeat: no-repeat;
       border: none;
+      transition: 0.5s all ease-in-out;
+      &_rotated {
+        transform: rotate(90deg);
+      }
     }
   }
 
@@ -133,7 +146,9 @@ body {
   .invisible {
     visibility: hidden;
     opacity: 0;
+    transform: translateX(100%);
   }
+
   .header {
     display: flex;
     justify-content: space-between;

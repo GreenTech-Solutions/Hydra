@@ -1,5 +1,8 @@
 function onBurgerClick(event) {
-    document.querySelector('.nav').classList.toggle('invisible');
+    const nav = document.querySelector('.nav')
+    nav.classList.toggle('invisible');
+    event.target.classList.toggle('nav__menu-button_rotated');
+
   }
 
 document.addEventListener('DOMContentLoaded', function () {
