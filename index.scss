@@ -27,6 +27,7 @@ button {
     justify-content: center;
     overflow-x: hidden;
     max-width: 100vw;
+    padding: 0 20px;
   }
 
   .button {
@@ -161,7 +162,6 @@ button {
     align-items: center;
     height: 120px;
     position: relative;
-    padding: 0 10px;
     &__logo {
       --logo-size: 100px;
       width: var(--logo-size);
@@ -184,14 +184,11 @@ button {
   }
 
   .hero {
-    width: 100vw;
     padding-bottom: 50px;
     background: url("media/line-left.svg") no-repeat;
     display: flex;
     flex-direction: column-reverse;
     justify-content: space-between;
-    padding: 0 20px;
-    margin-bottom: 40px;
     &__item {
       &_gradient {
         background: linear-gradient(to right, #c0b7e8, #8176af);
@@ -262,7 +259,7 @@ button {
       left: 0;
       background: url("media/lines-right.svg") no-repeat #302c42;
       background-size: 130%;
-      background-position: center;
+      background-position: top;
       width: 100%;
       height: 100%;
       z-index: -1;
@@ -379,7 +376,6 @@ button {
     background: url("media/about_curves.svg") no-repeat;
     background-size: contain;
     margin-bottom: 30px;
-    padding: 0 20px;
     gap: 20px;
     &__logo {
       border-radius: 80px;
@@ -416,7 +412,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0 25px;
     height: 450px;
     position: relative;
     margin-bottom: 50px;
@@ -482,7 +477,6 @@ button {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    margin: 0 25px;
     &__content {
       background: url("media/tech_brand.png") no-repeat;
       background-size: cover;
@@ -532,11 +526,11 @@ button {
       bottom: auto;
       top: auto;
       &_left {
-        left: -25px;
+        left: 0;
         transform: rotate(90deg);
       }
       &_right {
-        right: -25px;
+        right: 0;
         transform: rotate(-90deg);
       }
     }
