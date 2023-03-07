@@ -61,6 +61,7 @@ button {
     border: none;
     transition: 0.5s all ease-in-out;
     cursor: pointer;
+    pointer-events: none;
   }
   .round-container__button:hover {
     transform: scale(1.1);
@@ -537,6 +538,7 @@ button {
   }
   .path__button {
     z-index: 1;
+    bottom: -160px;
   }
   .path__button_left {
     left: 0;
@@ -551,10 +553,8 @@ button {
     background: linear-gradient(45deg, #8176af, #c0b7e8);
     border: 10px solid rgba(14, 14, 14, 0.1960784314);
     background-clip: padding-box;
-  }
-  .path__round-container, .path__round-button {
-    width: 90px;
-    height: 90px;
+    width: 160px;
+    height: 160px;
     font-size: 30px;
   }
   .path__round-button {
@@ -562,18 +562,15 @@ button {
   }
   .path__number {
     color: #343045;
-    font-size: 40px;
+    font-size: 64px;
     font-weight: bold;
   }
   .path__text {
-    background: url("media/arrow.svg") no-repeat;
-    background-position: left;
-    background-size: 15%;
-    width: 100px;
-    padding-left: 30px;
+    width: 190px;
     font-weight: 600;
-    line-height: 15px;
-    font-size: 13px;
+    line-height: 24px;
+    font-size: 24px;
+    text-align: center;
   }
   .contact-form {
     background: radial-gradient(#403a5f, #211e2e);

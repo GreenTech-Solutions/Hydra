@@ -66,6 +66,7 @@ button {
 
       transition: 0.5s all ease-in-out;
       cursor: pointer;
+      pointer-events: none;
       &:hover {
         transform: scale(1.1);
         box-shadow: 0 0 20px rgb(152, 94, 199);
@@ -578,11 +579,12 @@ button {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      // width: 100%;
       gap: 20px;
     }
     &__button {
       z-index: 1;
-
+      bottom: -160px;
       &_left {
         left: 0;
         transform: rotate(90deg);
@@ -598,11 +600,8 @@ button {
       background: linear-gradient(45deg, #8176af, #c0b7e8);
       border: 10px solid #0e0e0e32;
       background-clip: padding-box;
-    }
-    &__round-container,
-    &__round-button {
-      width: 90px;
-      height: 90px;
+      width: 160px;
+      height: 160px;
       font-size: 30px;
     }
 
@@ -612,19 +611,20 @@ button {
 
     &__number {
       color: #343045;
-      font-size: 40px;
+      font-size: 64px;
       font-weight: bold;
     }
 
     &__text {
-      background: url("media/arrow.svg") no-repeat;
-      background-position: left;
-      background-size: 15%;
-      width: 100px;
-      padding-left: 30px;
+      // background: url("media/arrow.svg") no-repeat;
+      // background-position: left;
+      // background-size: 15%;
+      width: 190px;
+      // padding-left: 30px;
       font-weight: 600;
-      line-height: 15px;
-      font-size: 13px;
+      line-height: 24px;
+      font-size: 24px;
+      text-align: center;
     }
   }
 

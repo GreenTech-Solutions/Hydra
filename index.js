@@ -134,7 +134,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (button.classList.contains('cards__button_right')) {
         cards.next();
     }
-    else {
+    else if (button.classList.contains('cards__button_left')){
         cards.previous();
     }
     rollElements(cards);
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function () {
     if (button.classList.contains('tech__button_right')) {
         techCompanies.next();
     }
-    else {
+    else if (button.classList.contains('tech__button_left')){
         techCompanies.previous();
     }
     rollElements(techCompanies);
@@ -153,7 +153,6 @@ document.addEventListener('DOMContentLoaded', function () {
   
   function onPathClick(event) {
     const button = event.target;
-    console.log(button);
     if (button.classList.contains('path__button_right')) {
         pathItems.next();
     }
