@@ -1,26 +1,82 @@
-let contacts = [];
-let currentContactsItem = 0;
-let maxContactsItems = 0;
+class Items {
+    constructor(array=undefined) {
+        array.forEach(element => {
+            this.add(element);
+        });
+    }
 
-let cards = [];
-let currentCard = 0;
-let maxCards = 0;
+    add(value) {
+        const item = new Item(value,this.#counter+1);
+
+        if (this.#counter===0) {
+            this.#firstAddedItem = item;
+            this.#lastAddedItem = item;
+            this.currentItem = item;
+        }
+        else {
+            this.#lastAddedItem.next = item;
+            item.previous = this.#lastAddedItem;
+            this.#lastAddedItem = item;
+            item.next = this.#firstAddedItem;
+
+            this.#firstAddedItem.previous = item;
+        }
+        this.#counter++;
+    }
+    next() {
+        this.currentItem = this.currentItem.next;
+    }
+    previous() {
+        this.currentItem = this.currentItem.previous;
+    }
+    length() {
+        return this.#counter;
+    }
+    forEach(func) {
+        let counter = 0;
+        let currentItem = this.#firstAddedItem;
+        while (counter!==this.#counter) {
+            func(currentItem);
+            currentItem = currentItem.next;
+            counter++;
+        }
+    }
+    currentItem;
+    #firstAddedItem;
+    #lastAddedItem;
+    #counter = 0;
+}
+
+class Item {
+    constructor(value,id) {
+        
+        this.value = value;
+this.id = id;
+    }
+    value;
+    id;
+    previous;
+    next;
+}
+
+let contacts ;
+
+let cards ;
 
 document.addEventListener('DOMContentLoaded', function () {
     let menuButton = document.querySelector('.nav__menu-button');
     menuButton.addEventListener('click',onBurgerClick);
 
-    contacts = document.querySelectorAll('.contacts__item');
-    maxContactsItems = contacts.length;
-    rollContactsItems();
+    contacts = new Items(Array.prototype.slice.call(document.querySelectorAll('.contacts__item')));
+    rollElements(contacts);
     let contactsButtons = document.querySelectorAll('.contacts__button');
     contactsButtons.forEach(contactsButton => {
         contactsButton.addEventListener('click',onContactsButtonClick);
     });
 
-    cards = document.querySelectorAll('.card');
-    maxCards = cards.length;
-    rollCards();
+    cards = new Items(Array.prototype.slice.call(document.querySelectorAll('.card')));
+    rollElements(cards);
+
     let cardsButtons = document.querySelectorAll('.cards__button');
     cardsButtons.forEach(cardsButton => {
         cardsButton.addEventListener('click',onCardsButtonClick)
@@ -28,27 +84,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
   }, false);
 
-  function rollContactsItems() {
-    for (let i = 0; i < contacts.length; i++) {
-        if (i!==currentContactsItem) {
-            contacts[i].classList.add('invisible');
+
+  function rollElements(items) {
+    items.forEach((item) => {
+        if (items.currentItem.id===item.id) {
+            item.value.classList.remove('invisible');
         }
         else {
-            contacts[i].classList.remove('invisible');
+            item.value.classList.add('invisible');
         }
-    }
-  }
-
-  function rollCards() {
-    for (let i = 0; i < cards.length; i++) {
-        if (i!==currentCard) {
-            cards[i].classList.add('invisible');
-        }
-        else {
-            cards[i].classList.remove('invisible');
-
-        }
-    }
+    })
   }
 
   function onBurgerClick(event) {
@@ -61,35 +106,23 @@ document.addEventListener('DOMContentLoaded', function () {
   function onContactsButtonClick(event) {
     const button = event.target;
     if (button.classList.contains('contacts__button_right')) {
-        currentContactsItem++;
-        if (currentContactsItem===maxContactsItems) {
-            currentContactsItem = 0;
-        }
+        contacts.next();
     }
     else {
-        currentContactsItem--;
-        if (currentContactsItem <0) {
-            currentContactsItem = maxContactsItems-1;
-        }
+        contacts.previous();
     }
-    rollContactsItems();
+    rollElements(contacts);
   }
 
   function onCardsButtonClick(event) {
     const button = event.target;
     if (button.classList.contains('cards__button_right')) {
-        currentCard++;
-        if (currentCard===maxCards) {
-            currentCard = 0;
-        }
+        cards.next();
     }
     else {
-        currentCard--;
-        if (currentCard <0) {
-            currentCard = maxCards-1;
-        }
+        cards.previous();
     }
-    rollCards();
+    rollElements(cards);
   }
 
 
