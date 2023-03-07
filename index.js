@@ -2,15 +2,28 @@ let contacts = [];
 let currentContactsItem = 0;
 let maxContactsItems = 0;
 
+let cards = [];
+let currentCard = 0;
+let maxCards = 0;
+
 document.addEventListener('DOMContentLoaded', function () {
     let menuButton = document.querySelector('.nav__menu-button');
     menuButton.addEventListener('click',onBurgerClick);
+
     contacts = document.querySelectorAll('.contacts__item');
     maxContactsItems = contacts.length;
     rollContactsItems();
     let contactsButtons = document.querySelectorAll('.contacts__button');
     contactsButtons.forEach(contactsButton => {
         contactsButton.addEventListener('click',onContactsButtonClick);
+    });
+
+    cards = document.querySelectorAll('.card');
+    maxCards = cards.length;
+    rollCards();
+    let cardsButtons = document.querySelectorAll('.cards__button');
+    cardsButtons.forEach(cardsButton => {
+        cardsButton.addEventListener('click',onCardsButtonClick)
     });
 
   }, false);
@@ -23,7 +36,17 @@ document.addEventListener('DOMContentLoaded', function () {
         else {
             contacts[i].classList.remove('invisible');
         }
-        
+    }
+  }
+
+  function rollCards() {
+    for (let i = 0; i < cards.length; i++) {
+        if (i!==currentCard) {
+            cards[i].classList.add('invisible');
+        }
+        else {
+            cards[i].classList.remove('invisible');
+        }
     }
   }
 
@@ -49,6 +72,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
     rollContactsItems();
+  }
+
+  function onCardsButtonClick(event) {
+    const button = event.target;
+    if (button.classList.contains('cards__button_right')) {
+        currentCard++;
+        if (currentCard===maxCards) {
+            currentCard = 0;
+        }
+    }
+    else {
+        currentCard--;
+        if (currentCard <0) {
+            currentCard = maxCards-1;
+        }
+    }
+    rollCards();
   }
 
 

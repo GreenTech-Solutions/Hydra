@@ -59,6 +59,8 @@ button {
     border: 10px solid #0e0e0e32;
     background-clip: padding-box;
     &__button {
+      width: 100%;
+      height: 100%;
       position: relative;
       border: none;
 
@@ -374,7 +376,7 @@ button {
     align-items: center;
     background: url("media/about_curves.svg") no-repeat;
     background-size: contain;
-    margin-bottom: 100px;
+    margin-bottom: 30px;
     padding: 0 20px;
     gap: 20px;
     &__logo {
@@ -412,11 +414,11 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0;
-    padding-bottom: 70px;
+    margin: 0 25px;
+    height: 450px;
     position: relative;
-    display: none;
     &__line {
+      display: none;
       position: absolute;
       width: 100%;
       height: 100%;
@@ -425,29 +427,51 @@ button {
       background-size: 100%;
       z-index: -1;
     }
-    display: none;
-  }
+    &__button {
+      z-index: 1;
 
-  .card {
-    background: radial-gradient(#433d60, #211e2e);
-    border-radius: 30px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 300px;
-    height: 400px;
-    padding: 30px 20px;
-    margin: auto 5px;
-
-    &__logo {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: #0e0e0e32 10px solid;
+      &_left {
+        left: -25px;
+        transform: rotate(90deg);
+      }
+      &_right {
+        right: -25px;
+        transform: rotate(-90deg);
+      }
     }
-    &__image {
-      max-width: 100%;
+    .card {
+      background: radial-gradient(#433d60, #211e2e);
+      border-radius: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      padding: 30px 30px;
+      transition: all 0.5s ease-in-out;
+      &__header {
+        font-size: 20px;
+        padding-bottom: 15px;
+        // background-color: red;
+        border-bottom: 1px solid #c0b7e833;
+      }
+      &__text {
+      }
+      &__button {
+        width: 100%;
+      }
+      &__logo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        border: #0e0e0e32 10px solid;
+      }
+      &__image {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
 
