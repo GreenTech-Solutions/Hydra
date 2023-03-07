@@ -511,13 +511,13 @@ button {
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px;
-    padding: 50px 0;
+    padding: 25px;
     width: 100%;
-    height: 100px;
+    height: 300px;
     position: relative;
-    display: none;
   }
   .path__line {
+    display: none;
     position: absolute;
     width: 100vw;
     height: 100%;
@@ -528,11 +528,23 @@ button {
     z-index: -1;
   }
   .path__item {
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 20px;
+  }
+  .path__button {
+    z-index: 1;
+  }
+  .path__button_left {
+    left: 0;
+    transform: rotate(90deg);
+  }
+  .path__button_right {
+    right: 0;
+    transform: rotate(-90deg);
   }
   .path__round-container {
     position: relative;

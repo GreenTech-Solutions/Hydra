@@ -62,6 +62,7 @@ this.id = id;
 let contacts;
 let cards;
 let techCompanies;
+let pathItems;
 
 document.addEventListener('DOMContentLoaded', function () {
     let menuButton = document.querySelector('.nav__menu-button');
@@ -87,6 +88,14 @@ document.addEventListener('DOMContentLoaded', function () {
     techCompaniesButtons.forEach(techCompaniesButton => {
         techCompaniesButton.addEventListener('click',onTechCompaniesClick);
     })
+
+    pathItems = new Items(Array.prototype.slice.call((document.querySelectorAll('.path__item'))));
+    rollElements(pathItems);
+    let pathButtons = document.querySelectorAll('.path__button');
+    pathButtons.forEach(pathButton => {
+        pathButton.addEventListener('click',onPathClick);
+    })
+
 
   }, false);
 
@@ -140,5 +149,17 @@ document.addEventListener('DOMContentLoaded', function () {
         techCompanies.previous();
     }
     rollElements(techCompanies);
+  }  
+  
+  function onPathClick(event) {
+    const button = event.target;
+    console.log(button);
+    if (button.classList.contains('path__button_right')) {
+        pathItems.next();
+    }
+    else if (button.classList.contains('path__button_left')){
+        pathItems.previous();
+    }
+    rollElements(pathItems);
   }
 

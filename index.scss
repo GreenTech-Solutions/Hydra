@@ -557,12 +557,12 @@ button {
     display: flex;
     justify-content: space-around;
     margin-bottom: 100px;
-    padding: 50px 0;
+    padding: 25px;
     width: 100%;
-    height: 100px;
+    height: 300px;
     position: relative;
-    display: none;
     &__line {
+      display: none;
       position: absolute;
       width: 100vw;
       height: 100%;
@@ -573,12 +573,26 @@ button {
       z-index: -1;
     }
     &__item {
+      position: absolute;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       gap: 20px;
     }
+    &__button {
+      z-index: 1;
+
+      &_left {
+        left: 0;
+        transform: rotate(90deg);
+      }
+      &_right {
+        right: 0;
+        transform: rotate(-90deg);
+      }
+    }
+
     &__round-container {
       position: relative;
       background: linear-gradient(45deg, #8176af, #c0b7e8);
