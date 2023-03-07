@@ -151,7 +151,6 @@ button {
   .invisible {
     visibility: hidden;
     opacity: 0;
-    transform: translateX(100%);
   }
 
   .header {
@@ -303,6 +302,7 @@ button {
       justify-content: center;
       align-items: center;
       position: absolute;
+      transition: 0.5s all ease-in-out;
     }
     &__header {
       display: none;

@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
         else {
             cards[i].classList.remove('invisible');
+
         }
     }
   }
