@@ -383,6 +383,7 @@ button {
     margin: 0 25px;
     height: 450px;
     position: relative;
+    margin-bottom: 50px;
   }
   .cards__line {
     display: none;
@@ -442,40 +443,64 @@ button {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    display: none;
+    margin: 0 25px;
   }
   .tech__content {
     background: url("media/tech_brand.png") no-repeat;
-    background-size: 100%;
-    width: 900px;
-    height: 210px;
+    background-size: cover;
+    background-position: left;
+    background-position-x: -150px;
+    width: 100%;
+    height: 170px;
     border-radius: 150px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    display: none;
   }
   .tech__headers {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 15px;
+  }
+  .tech__header {
+    font-size: 15px;
   }
   .tech__companies {
-    padding-top: 10px;
-    margin-bottom: 50px;
+    padding: 20px;
+    width: 100%;
+    height: 150px;
+    margin: 50px 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 40px;
+    position: relative;
   }
-  .tech__image {
-    width: 200px;
+  .tech__companies-item {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
   }
-  .tech__image:first-child {
-    width: 150px;
-    height: 150px;
+  .tech__round-container {
+    display: none;
+  }
+  .tech__button {
+    z-index: 1;
+    bottom: auto;
+    top: auto;
+  }
+  .tech__button_left {
+    left: -25px;
+    transform: rotate(90deg);
+  }
+  .tech__button_right {
+    right: -25px;
+    transform: rotate(-90deg);
   }
   .tech__round-button {
     background: url("media/arrow_down.svg") no-repeat;

@@ -59,9 +59,9 @@ this.id = id;
     next;
 }
 
-let contacts ;
-
-let cards ;
+let contacts;
+let cards;
+let techCompanies;
 
 document.addEventListener('DOMContentLoaded', function () {
     let menuButton = document.querySelector('.nav__menu-button');
@@ -76,11 +76,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     cards = new Items(Array.prototype.slice.call(document.querySelectorAll('.card')));
     rollElements(cards);
-
     let cardsButtons = document.querySelectorAll('.cards__button');
     cardsButtons.forEach(cardsButton => {
         cardsButton.addEventListener('click',onCardsButtonClick)
     });
+
+    techCompanies = new Items(Array.prototype.slice.call(document.querySelectorAll('.tech__companies-item')));
+    rollElements(techCompanies);
+    let techCompaniesButtons = document.querySelectorAll('.tech__button');
+    techCompaniesButtons.forEach(techCompaniesButton => {
+        techCompaniesButton.addEventListener('click',onTechCompaniesClick);
+    })
 
   }, false);
 
@@ -125,4 +131,14 @@ document.addEventListener('DOMContentLoaded', function () {
     rollElements(cards);
   }
 
+  function onTechCompaniesClick(event) {
+    const button = event.target;
+    if (button.classList.contains('tech__button_right')) {
+        techCompanies.next();
+    }
+    else {
+        techCompanies.previous();
+    }
+    rollElements(techCompanies);
+  }
 

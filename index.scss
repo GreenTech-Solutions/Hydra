@@ -417,6 +417,7 @@ button {
     margin: 0 25px;
     height: 450px;
     position: relative;
+    margin-bottom: 50px;
     &__line {
       display: none;
       position: absolute;
@@ -481,38 +482,68 @@ button {
     justify-content: flex-start;
     align-items: center;
     position: relative;
-    display: none;
+    margin: 0 25px;
     &__content {
       background: url("media/tech_brand.png") no-repeat;
-      background-size: 100%;
-      width: 900px;
-      height: 210px;
+      background-size: cover;
+      background-position: left;
+      background-position-x: -150px;
+      width: 100%;
+      height: 170px;
       border-radius: 150px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      display: none;
     }
     &__headers {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      gap: 15px;
+    }
+    &__header {
+      font-size: 15px;
     }
     &__companies {
-      padding-top: 10px;
-      margin-bottom: 50px;
+      padding: 20px;
+      width: 100%;
+      height: 150px;
+      margin: 50px 0;
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       gap: 40px;
+      position: relative;
+      &-item {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+      }
     }
     &__image {
-      width: 200px;
-      &:first-child {
-        width: 150px;
-        height: 150px;
+      // &:first-child {
+      //   width: 150px;
+      //   height: 150px;
+      // }
+    }
+    &__round-container {
+      display: none;
+    }
+    &__button {
+      z-index: 1;
+      bottom: auto;
+      top: auto;
+      &_left {
+        left: -25px;
+        transform: rotate(90deg);
+      }
+      &_right {
+        right: -25px;
+        transform: rotate(-90deg);
       }
     }
     &__round-button {
