@@ -504,6 +504,7 @@ body {
   .contact-form__header {
     margin-bottom: 20px;
     font-size: 20px;
+    text-align: center;
   }
   .contact-form__header_small {
     font-weight: 200;
