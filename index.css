@@ -18,7 +18,8 @@ body {
 @media (min-width: 360px) {
   .container {
     overflow-x: hidden;
-    padding: 0 20px;
+    padding: 0 5%;
+    position: relative;
   }
   .button {
     width: 150px;
@@ -381,7 +382,8 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: url("media/tech_brand.png") no-repeat;
+    background-image: url("media/tech_brand.png");
+    background-repeat: no-repeat;
     background-size: cover;
     background-position-x: -150px;
     border-radius: 150px;
@@ -414,9 +416,6 @@ body {
     display: flex;
     justify-content: center;
   }
-  .tech__round-container {
-    display: none;
-  }
   .tech__button {
     z-index: 1;
     bottom: auto;
@@ -429,6 +428,9 @@ body {
   .tech__button_right {
     right: 0;
     transform: rotate(-90deg);
+  }
+  .tech__round-container {
+    display: none;
   }
   .tech__round-button {
     background: url("media/arrow_down.svg") no-repeat;
@@ -593,12 +595,14 @@ body {
     background: url("/media/logo.svg");
     background-size: cover;
   }
+  .footer__outline {
+    background: linear-gradient(to bottom, #343045, #c0b7e8, #8176af, #343045);
+  }
   .footer__outline_vertical {
     display: none;
   }
   .footer__outline_horizontal {
     height: 1px;
-    background: linear-gradient(to right, #343045, #c0b7e8, #8176af, #343045);
   }
   .footer__nav {
     display: none;
@@ -640,5 +644,26 @@ body {
   }
   .footer__button {
     width: 100%;
+  }
+  .footer__divider {
+    display: none;
+  }
+}
+@media (min-width: 500px) {
+  .container {
+    padding: 0 10%;
+  }
+}
+@media (min-width: 550px) {
+  .container {
+    padding: 0 12%;
+  }
+}
+@media (min-width: 700px) {
+  .container {
+    padding: 0 20%;
+  }
+  .hero__lines {
+    top: -200px;
   }
 }/*# sourceMappingURL=index.css.map */

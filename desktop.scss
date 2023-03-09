@@ -1,0 +1,436 @@
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 10vw;
+  }
+
+  .nav {
+    position: static;
+
+    &__menu {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    &__li {
+      width: auto;
+      padding: 10px;
+
+      background: transparent;
+      outline: none;
+      border: 2px solid transparent;
+      border-radius: 40px;
+
+      font-size: 10px;
+
+      &:hover {
+        transform: scale(1.1);
+        box-shadow: 0 0 20px rgb(152, 94, 199);
+        border: 2px solid #fff;
+      }
+    }
+
+    &__menu-button {
+      display: none;
+    }
+  }
+
+  .invisible {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .header {
+    margin-bottom: 40px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__feedback {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    &__button {
+      &_contact {
+        background: transparent;
+        border: 2px solid #fff;
+
+        color: #fff;
+      }
+    }
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+
+    &__content {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-direction: column;
+      width: 90%;
+    }
+
+    &__header {
+      align-items: flex-start;
+
+      font-size: 30px;
+    }
+
+    &__text {
+      display: flex;
+      font-weight: normal;
+      line-height: 25px;
+      font-size: 12px;
+    }
+
+    &__buttons {
+      display: flex;
+
+      &_build {
+        margin: 0;
+      }
+
+      &_arrow {
+        display: flex;
+        padding: 0;
+        background: url("media/arrow.svg") no-repeat center;
+        pointer-events: none;
+      }
+    }
+
+    &__lines {
+      top: 0;
+      left: auto;
+      right: -200px;
+
+      background-size: 50%;
+    }
+  }
+
+  .contacts {
+    margin-bottom: 70px;
+
+    &__content {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__item {
+      background-size: 17%;
+      background-position: left;
+      background-repeat: no-repeat;
+      height: 100px;
+      width: 30%;
+
+      position: static;
+
+      &:nth-child(2) {
+        border: 1px solid #c0b7e833;
+        border-top: none;
+        border-bottom: none;
+      }
+    }
+
+    &__header {
+      display: flex;
+    }
+
+    &__text {
+      margin-top: 10px;
+      font-size: 10px;
+    }
+
+    &__logo {
+      width: 50px;
+      height: 50px;
+    }
+
+    &__button {
+      display: none;
+    }
+  }
+
+  .introduction {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 70px;
+
+    &__headers {
+      width: 30%;
+    }
+
+    &__header {
+      text-align: left;
+      margin: 10px 0;
+
+      &_arrow {
+        background: url("media/longarrow.svg") no-repeat;
+        background-position: right;
+        background-size: 40%;
+      }
+    }
+
+    &__text {
+      display: flex;
+      width: 55%;
+    }
+  }
+
+  .about {
+    margin-bottom: 100px;
+
+    flex-direction: row;
+    gap: 100px;
+
+    &__logo {
+      width: 100%;
+    }
+
+    &__content {
+      align-items: flex-start;
+    }
+
+    &__headers {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+
+    &__header {
+      display: flex;
+      font-size: 20px;
+      line-height: 30px;
+    }
+
+    &__button {
+      width: 220px;
+    }
+  }
+
+  .cards {
+    height: auto;
+
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+
+    &__line {
+      width: 100%;
+      height: 100%;
+
+      display: block;
+      position: absolute;
+
+      background: url("media/cards-curve.svg") no-repeat;
+      background-size: 100%;
+
+      transform: scale(1.3, 1.3) translate(0, 100px);
+      z-index: -1;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    .card {
+      margin: auto 5px;
+      position: static;
+      gap: 20px;
+
+      &__logo {
+        width: 150px;
+        height: 150px;
+      }
+
+      &__text {
+        font-size: 10px;
+        line-height: 15px;
+      }
+    }
+  }
+
+  .tech {
+    &__content {
+      height: 200px;
+
+      background-position: center;
+    }
+
+    &__header {
+      font-size: 25px;
+    }
+
+    &__companies {
+      padding-top: 10px;
+      margin-bottom: 50px;
+
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+
+      &-item {
+        position: static;
+      }
+    }
+
+    &__image {
+      &:first-child {
+        width: 150px;
+        height: 150px;
+      }
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__round-container {
+      display: flex;
+    }
+  }
+
+  .path {
+    height: auto;
+
+    padding: 50px 0;
+
+    &__line {
+      width: 100vw;
+      height: 100%;
+
+      display: flex;
+      position: absolute;
+
+      background: url("media/path_curve.svg") no-repeat;
+      background-position: bottom 40px right 0;
+      background-size: 100%;
+
+      transform: translate(0, -100px) scaleX(01);
+      z-index: -1;
+    }
+
+    &__item {
+      position: static;
+      justify-content: space-between;
+      gap: 10px;
+    }
+
+    &__button {
+      display: none;
+    }
+
+    &__round-container {
+      box-sizing: content-box;
+
+      overflow: hidden;
+    }
+
+    &__round-button {
+      padding: 0;
+    }
+
+    &__text {
+      padding-left: 30px;
+
+      background: url("media/arrow.svg") no-repeat;
+      background-position: left;
+      background-size: 15%;
+
+      font-weight: 600;
+      line-height: 15px;
+      font-size: 13px;
+    }
+  }
+
+  .contact-form {
+    padding: 50px 100px;
+
+    &__item {
+      flex-direction: row;
+      gap: 5px;
+    }
+
+    &__textarea {
+      height: 210px;
+    }
+
+    &__button {
+      width: 200px;
+    }
+  }
+
+  .footer {
+    &__line {
+      width: 100%;
+      height: 50%;
+
+      background: url("media/footer_curve.svg") no-repeat;
+      background-size: contain;
+
+      transform: scale(2) translateY(-10px);
+      transform-origin: left bottom;
+    }
+
+    &__main {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    &__logo {
+      width: 100px;
+      height: 100px;
+
+      background: url("/media/logo.svg");
+      background-size: cover;
+    }
+
+    &__outline {
+      &_vertical {
+        width: 3px;
+        height: 100px;
+
+        display: flex;
+      }
+    }
+
+    &__nav {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    &__contacts {
+      align-items: flex-start;
+    }
+
+    &__social {
+      &-image {
+        width: 30px;
+      }
+    }
+
+    &__button {
+      width: 200px;
+    }
+
+    &__copyright {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    &__divider {
+      display: flex;
+      margin: 0 10px;
+    }
+  }
+}
